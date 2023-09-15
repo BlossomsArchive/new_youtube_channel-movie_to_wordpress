@@ -26,9 +26,9 @@ wordpress_api_password = os.environ.get("WORDPRESS_API_PASSWORD")
 api_password = wordpress_api_password
 
 for i in range(feed_size):
-    now_up = entries[i]["updated"]
+    now_up = entries[i]["published"]
     if now_up == old_up:
-        new_up = entries[0]["updated"]
+        new_up = entries[0]["published"]
         g = open("nvnb-ipa.txt", "w", encoding="utf-8")
         g.write(new_up)
         g.close()
@@ -52,7 +52,7 @@ for i in range(feed_size):
     print(title+"\n"+page_url)
     i = i+1
     
-new_up = entries[0]["updated"]
+new_up = entries[0]["published"]
 print(new_up)
 g = open("YT_to_WP.txt", "w", encoding="utf-8")
 g.write(new_up)
