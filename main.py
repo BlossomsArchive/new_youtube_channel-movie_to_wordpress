@@ -7,7 +7,9 @@ f = open("YT_to_WP.txt", "r", encoding="utf-8")
 old_up = f.readline().replace("\n", "")
 f.close()
 
-entries = feedparser.parse('https://www.youtube.com/feeds/videos.xml?channel_id=UC33HnC11kHWjIS2IxFhqa4Q')['entries']
+channel_id = os.environ.get("CHANNEL_ID")
+
+entries = feedparser.parse('https://www.youtube.com/feeds/videos.xml?channel_id='+channel_id)['entries']
 i = 0
 
 feed_size = len(entries)
