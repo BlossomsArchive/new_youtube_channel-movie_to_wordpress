@@ -41,7 +41,7 @@ for i in range(feed_size):
             'title': "動画:"+title,
             'content': page_url,
             'categories': '17',
-            # 'status': 'publish',  # draft=下書き、publish=公開　省略時はdraftになる
+            'status': 'publish',  # draft=下書き、publish=公開　省略時はdraftになる
         }
         # Post APIのURL
         post_api_url = f'{blog_url}/wp-json/wp/v2/posts'
