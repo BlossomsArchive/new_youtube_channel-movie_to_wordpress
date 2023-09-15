@@ -1,4 +1,4 @@
-name: Get_New_Post&Post_any_SNS
+name: Get_New_Movie&Post_WP
 
 on:
   workflow_dispatch:
