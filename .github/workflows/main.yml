@@ -24,6 +24,7 @@ jobs:
         env:
           WORDPRESS_USER: ${{ secrets.WORDPRESS_USER }}
           WORDPRESS_API_PASSWORD: ${{ secrets.WORDPRESS_API_PASSWORD }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
 
         run: |
           python main.py
