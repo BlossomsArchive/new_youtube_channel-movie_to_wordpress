@@ -6,7 +6,6 @@ import os
 f = open("YT_to_WP.txt", "r", encoding="utf-8")
 old_up = f.readline().replace("\n", "")
 f.close()
-old_up = 0
 
 entries = feedparser.parse('https://www.youtube.com/feeds/videos.xml?channel_id=UC33HnC11kHWjIS2IxFhqa4Q')['entries']
 i = 0
